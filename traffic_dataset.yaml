@@ -1,8 +1,11 @@
 path: D:/deep_study/yolo/traffic_dataset
-train: train_val/train-image
+train: train_val/train-images
 val: improve_data/images
 #path 是 SPLObjDetectDatasetV2 文件夹的绝对路径。
 # 类别数量
 nc: 2
 # 类别名称
 names: ['Motor Vehicle', 'Non_motorized Vehicle']
+#将models文件中的yolov5s文件中的nc从80改为此文件中的2
+#先在终端打开yolo环境，在traffic_dataset文件夹路径下中输入命令：
+#yolo train model=yolov5s.pt data=traffic_dataset.yaml epochs=50 imgsz=640 batch=16 device=cpu
